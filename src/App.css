@@ -16,7 +16,8 @@
   color: white;
 } */
 
-.App-link {
-  color: #61dafb;
+.heading{
+  color: purple;
+  text-align: center;
+  margin-top: 1rem;
 }
-
