@@ -3,19 +3,41 @@ import "./App.css";
 
 export default function App() {
   return (
-    <div>
+    <div className="whole-page">
       {/* heading */}
       <h1 className="heading">BMI Calculator</h1>
+
+      {/* bmi calculation area  */}
+      <div className="bmi-calculation-area">
+        <h2 className="heading-3">Calculate Your BMI:</h2>
+
+        <div className="whole-input-area">
+          {/* height input in Meters */}
+          <span className="height-heading">Height (Meters)</span>
+          <input className="height-input" type="number" placeholder="Meter" />
+
+          {/* weight input in kg's  */}
+          <span className="weight-heading">Weight (KGs) </span>
+          <input className="weight-input" type="text" placeholder="kilograms" />
+        </div>
+
+        <br />
+        {/* calculate button  */}
+        <button className="cal-btn">Calculate</button>
+
+        <span className="bmi-output">Your BMI is: </span>
+      </div>
 
       {/* about mbi calculator  */}
       <div className="about-bmi">
         <h2 className="heading-2">What is BMI ?</h2>
         <p className="paragraph">
-          Body Mass Index (BMI) is a person's weight in kilograms (or pounds)
-          divided by the square of height in meters (or feet). A high BMI can
-          indicate high body fatness. BMI screens for weight categories that may
-          lead to health problems, but it does not diagnose the body fatness or
-          health of an individual
+          Body <span className="bmi-letter">M</span>ass{" "}
+          <span className="bmi-letter">I</span>ndex (BMI) is a person's weight
+          in kilograms (or pounds) divided by the square of height in meters (or
+          feet). A high BMI can indicate high body fatness. BMI screens for
+          weight categories that may lead to health problems, but it does not
+          diagnose the body fatness or health of an individual
           <br />
           BMI in an individual is calculated by the use of a mathematical
           formula. It can also be estimated using tables in which one can match
@@ -29,36 +51,26 @@ export default function App() {
         </p>
       </div>
 
-      {/* bmi calculation area  */}
-      <div className="bmi-calculation-area">
-        <h2 className="heading-3">Calculate Your BMI</h2>
-
-        {/* height input in foot and inch  */}
-        <h5 className="height-heading">Enter Your Height in Meters</h5>
-        <input className="height-input" type="number" placeholder="Meter" />
-
-        {/* weight input in kg's  */}
-        <h5>Enter Your Weight In KiloGram (KGs) </h5>
-        <input className="weight-input" type="text" placeholder="kilograms" />
-      </div>
-
       {/* overview list  */}
       <div>
-        <h3 className="overview-heading">OverView</h3>
+        <h2 className="overview-heading">Over-View:</h2>
         <ul className="overview-list-complete">
           <li>
             {" "}
-            <span className="weight-type">Underweight</span> - BMI less than 18.5
+            <span className="weight-type">Underweight</span> - BMI less than
+            18.5
           </li>
 
           <li>
             {" "}
-            <span className="weight-type">Normal Weight</span> - BMI between 18.5 and 24
+            <span className="weight-type">Normal Weight</span> - BMI between
+            18.5 and 24
           </li>
 
           <li>
             {" "}
-            <span className="weight-type">Overweight</span> - BMI between 25 and 29.9
+            <span className="weight-type">Overweight</span> - BMI between 25 and
+            29.9
           </li>
 
           <li>

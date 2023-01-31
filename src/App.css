@@ -1,23 +1,114 @@
-.App {
-  /* text-align: center; */
-  background-color:#1a2334 ;
-  /* height: 100%; */
-  min-height: 100vh;
-}
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap');
 
-
-/* .App-header {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
-.heading{
+.heading {
   color: purple;
   text-align: center;
   margin-top: 1rem;
+  margin-bottom: 4vh;
+  font-family: 'Unbounded', cursive;
+}
+
+.whole-page {
+  margin: 2vw 15vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  text-align: center;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.heading {
+  font-weight: 600;
+}
+
+/* calculation area  */
+.bmi-calculation-area{
+  margin-bottom: 2rem;
+}
+.heading-3 {
+  text-align: start;
+  /* color: blueviolet; */
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+.height-heading {
+  margin-right: 10px;
+  font-weight: 700;
+
+}
+.weight-heading {
+  margin-right: 10px;
+  font-weight: 700;
+
+}
+
+.whole-input-area {
+  display: flex;
+  row-gap: 15px;
+}
+.height-input {
+  border: 1px solid black;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.weight-input {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.cal-btn{
+  background-color: brown;
+  /* text-align: center; */
+  display: flex;
+  justify-content:left;
+  padding: 7px 12px;
+  border-radius: 4px;
+  color: azure;
+}
+.bmi-output{
+  font-size: larger;
+  color: #154360;
+}
+
+/* about BMI  */
+/* .about-bmi {
+  max-width: 70vw;
+
+} */
+.heading-2{
+  /* color: blueviolet; */
+  text-align: start;
+}
+.paragraph{
+  text-align: justify;
+  text-indent: 60px;
+  line-height: 1.8rem;
+  font-weight:500 ;
+  color: #273746;
+}
+.paragraph::first-letter{
+  font-size: 1.5rem;
+}
+.bmi-letter{
+  font-size: 1.5rem;
+}
+
+/* overview  */
+.overview-heading{
+  /* color: blueviolet; */
+  text-align: start;
+}
+.overview-list-complete{
+  line-height: 1.6;
+  text-align: left;
+}
+.weight-type{
+  font-weight: 700;
+  color: #1C2833;
+}
+h2{
+  font-family: 'Signika Negative', sans-serif;
+  color: #884EA0;
 }
