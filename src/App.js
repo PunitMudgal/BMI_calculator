@@ -5,6 +5,7 @@ import "./App.css";
 export default function App() {
   const [height, setHeight] = useState();
   const [weight, setWeight] = useState();
+  const [bmi, setBmi] = useState();
 
   const heightHandler = (event) => {
     // console.log(event.target.value);
@@ -17,7 +18,8 @@ export default function App() {
   };
 
   const calcBtn = () => {
-
+    console.log(height);
+    console.log(weight);
   };
 
   return (
