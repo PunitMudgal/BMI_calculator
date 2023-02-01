@@ -29,6 +29,24 @@ export default function App() {
     setBmi(shortValue);
   };
 
+  const yourCondition = () => {
+if(bmi<18.5){
+ const condition = 'UnderWeight';
+}
+else if(bmi>18.5 && bmi<24){
+const condition = 'Normal';
+}
+else if(bmi>25 && bmi<29.9){
+ const condition = 'Over Weight';
+}
+else if(bmi>30) {
+ const condition = 'Obese';
+}
+else{
+ const condition = null;
+}
+  }
+
   return (
     <div className="whole-page">
       {/* heading */}
@@ -66,7 +84,7 @@ export default function App() {
           Calculate
         </button>
 
-        <span className="bmi-output">Your BMI is: {bmi} </span>
+        <span className="bmi-output">Your BMI is: {bmi} {() => yourCondition} </span>
       </div>
 
       {/* about mbi calculator  */}

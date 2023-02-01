@@ -74,8 +74,9 @@
   color: snow;
 }
 .bmi-output{
-  font-size: larger;
-  color: #154360;
+  font-size: 2rem;
+  color: #16A085;
+  font-weight: 800;
 }
 
 /* about BMI  */
