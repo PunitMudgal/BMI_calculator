@@ -7,6 +7,7 @@ export default function App() {
   const [weight, setWeight] = useState();
   const [bmi, setBmi] = useState();
 
+
   const heightHandler = (event) => {
     // console.log(event.target.value);
     setHeight(event.target.value);
@@ -18,8 +19,14 @@ export default function App() {
   };
 
   const calcBtn = () => {
-    console.log(height);
-    console.log(weight);
+    // console.log(height);
+    // console.log(weight);
+    const squareOfHeight = height*height;
+    // console.log(squareOfHeight);
+    const actualBMI = weight / squareOfHeight;
+    // console.log(actualBMI);
+    // const shortValue = actualBMI.tofix
+    setBmi(actualBMI);
   };
 
   return (
@@ -59,7 +66,7 @@ export default function App() {
           Calculate
         </button>
 
-        <span className="bmi-output">Your BMI is: </span>
+        <span className="bmi-output">Your BMI is: {bmi} </span>
       </div>
 
       {/* about mbi calculator  */}
