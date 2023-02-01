@@ -25,8 +25,8 @@ export default function App() {
     // console.log(squareOfHeight);
     const actualBMI = weight / squareOfHeight;
     // console.log(actualBMI);
-    // const shortValue = actualBMI.tofix
-    setBmi(actualBMI);
+    const shortValue = actualBMI.toFixed(2)
+    setBmi(shortValue);
   };
 
   return (
