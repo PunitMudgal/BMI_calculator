@@ -1,7 +1,25 @@
 import React from "react";
+import { useState } from "react";
 import "./App.css";
 
 export default function App() {
+  const [height, setHeight] = useState();
+  const [weight, setWeight] = useState();
+
+  const heightHandler = (event) => {
+    // console.log(event.target.value);
+    setHeight(event.target.value);
+  };
+
+  const weightHandler = (event) => {
+    // console.log(event.target.value);
+    setWeight(event.target.value);
+  };
+
+  const calcBtn = () => {
+
+  };
+
   return (
     <div className="whole-page">
       {/* heading */}
@@ -14,16 +32,30 @@ export default function App() {
         <div className="whole-input-area">
           {/* height input in Meters */}
           <span className="height-heading">Height (Meters)</span>
-          <input className="height-input" type="number" placeholder="Meter" />
+          <input
+            className="height-input"
+            onChange={heightHandler}
+            type="number"
+            placeholder="Meter"
+            value={height}
+          />
 
           {/* weight input in kg's  */}
           <span className="weight-heading">Weight (KGs) </span>
-          <input className="weight-input" type="text" placeholder="kilograms" />
+          <input
+            className="weight-input"
+            onChange={weightHandler}
+            type="text"
+            placeholder="kilograms"
+            value={weight}
+          />
         </div>
 
         <br />
         {/* calculate button  */}
-        <button className="cal-btn">Calculate</button>
+        <button onClick={calcBtn} className="cal-btn">
+          Calculate
+        </button>
 
         <span className="bmi-output">Your BMI is: </span>
       </div>
