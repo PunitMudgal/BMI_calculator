@@ -216,7 +216,7 @@ export default function App() {
 
       <div>
         <h2>Common feet to meter conversions</h2>
-        <ul>
+        <ol>
           <li>5 feet 1 inches = 1.5494 m</li>
           <li>5 feet 2 inches = 1.5748 m</li>
           <li>5 feet 3 inches = 1.6002 m</li>
@@ -229,7 +229,9 @@ export default function App() {
           <li>5 feet 10 inches = 1.778 m</li>
           <li>5 feet 11 inches = 1.8034 m</li>
           <li>6 feet 0 inches = 1.8288 m</li>
-        </ul>
+          <li>6 feet 1 inches = 1.8542 m</li>
+          <li>6 feet 2 inches = 1.8796 m</li>
+        </ol>
       </div>
 
       {/* about mbi calculator  */}
