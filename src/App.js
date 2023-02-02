@@ -7,7 +7,6 @@ export default function App() {
   const [weight, setWeight] = useState();
   const [bmi, setBmi] = useState();
 
-
   const heightHandler = (event) => {
     // console.log(event.target.value);
     setHeight(event.target.value);
@@ -21,30 +20,41 @@ export default function App() {
   const calcBtn = () => {
     // console.log(height);
     // console.log(weight);
-    const squareOfHeight = height*height;
+    const squareOfHeight = height * height;
     // console.log(squareOfHeight);
     const actualBMI = weight / squareOfHeight;
     // console.log(actualBMI);
-    const shortValue = actualBMI.toFixed(2)
+    const shortValue = actualBMI.toFixed(2);
     setBmi(shortValue);
   };
 
-  const yourCondition = () => {
-if(bmi<18.5){
- const condition = 'UnderWeight';
-}
-else if(bmi>18.5 && bmi<24){
-const condition = 'Normal';
-}
-else if(bmi>25 && bmi<29.9){
- const condition = 'Over Weight';
-}
-else if(bmi>30) {
- const condition = 'Obese';
-}
-else{
- const condition = null;
-}
+  //   const yourCondition = () => {
+  // if(bmi<18.5){
+  //  const condition = 'UnderWeight';
+  // }
+  // else if(bmi>18.5 && bmi<24){
+  // const condition = 'Normal';
+  // }
+  // else if(bmi>25 && bmi<29.9){
+  //  const condition = 'Over Weight';
+  // }
+  // else if(bmi>30) {
+  //  const condition = 'Obese';
+  // }
+  // else{
+  //  const condition = null;
+  // }
+  //   }
+
+  function FuncNormal() {
+    return <h1 style={{ color: "#2ECC71", fontWeight: "700", fontSize: "2rem" }}>
+      Normal
+    </h1>;
+  }
+  function FuncUnderweight() {
+    return <h1 style={{ color: "#F1C40F", fontWeight: "700", fontSize: "2rem" }}>
+      Underweight
+    </h1>;
   }
 
   return (
@@ -84,7 +94,15 @@ else{
           Calculate
         </button>
 
-        <span className="bmi-output">Your BMI is: {bmi} {() => yourCondition} </span>
+        <span className="bmi-output">
+          Your BMI is: {bmi} { if(bmi = null){
+          return null;
+          }
+          else if (bmi < 18.5){
+            <FuncUnderweight/>
+          }
+          }
+        </span>
       </div>
 
       {/* about mbi calculator  */}
