@@ -159,7 +159,7 @@ export default function App() {
         </button>
 
         <span className="bmi-output">Your BMI is: {bmi} </span>
-      
+
         {/* {() => {
           if ((bmi = null)) return null;
           else if (bmi < 18.5) {
@@ -212,6 +212,24 @@ export default function App() {
             );
           }
         }} */}
+      </div>
+
+      <div>
+        <h2>Common feet to meter conversions</h2>
+        <ul>
+          <li>5 feet 1 inches = 1.5494 m</li>
+          <li>5 feet 2 inches = 1.5748 m</li>
+          <li>5 feet 3 inches = 1.6002 m</li>
+          <li>5 feet 4 inches = 1.6256 m</li>
+          <li>5 feet 5 inches = 1.651 m</li>
+          <li>5 feet 6 inches = 1.6764 m</li>
+          <li>5 feet 7 inches = 1.7018 m</li>
+          <li>5 feet 8 inches = 1.7272 m</li>
+          <li>5 feet 9 inches = 1.7526 m</li>
+          <li>5 feet 10 inches = 1.778 m</li>
+          <li>5 feet 11 inches = 1.8034 m</li>
+          <li>6 feet 0 inches = 1.8288 m</li>
+        </ul>
       </div>
 
       {/* about mbi calculator  */}
