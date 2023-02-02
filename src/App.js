@@ -46,16 +46,80 @@ export default function App() {
   // }
   //   }
 
-  function FuncNormal() {
-    return <h1 style={{ color: "#2ECC71", fontWeight: "700", fontSize: "2rem" }}>
-      Normal
-    </h1>;
-  }
-  function FuncUnderweight() {
-    return <h1 style={{ color: "#F1C40F", fontWeight: "700", fontSize: "2rem" }}>
-      Underweight
-    </h1>;
-  }
+  // whole complete funtion
+  // function fullFunc (props){
+  //   return (
+  //     {if(props.bmi < 18.5 ){
+  //       return <h1>underweight</h1>
+  //     }}
+  //   )
+  // }
+
+  // function FuncNormal() {
+  //   return (
+  //     <h1 style={{ color: "#2ECC71", fontWeight: "700", fontSize: "2rem" }}>
+  //       Normal
+  //     </h1>
+  //   );
+  // }
+  // function FuncUnderweight() {
+  //   return (
+  //     <h1 style={{ color: "#F1C40F", fontWeight: "700", fontSize: "2rem" }}>
+  //       Underweight
+  //     </h1>
+  //   );
+  // }
+  // function FuncOverweight() {
+  //   return (
+  //     <h1 style={{ color: "#CB4335", fontWeight: "700", fontSize: "2rem" }}>
+  //       Overweight
+  //     </h1>
+  //   );
+  // }
+  // function FuncObese() {
+  //   return (
+  //     <h1 style={{ color: "#2C3E50", fontWeight: "700", fontSize: "2rem" }}>
+  //       Obese
+  //     </h1>
+  //   );
+  // }
+
+  // const Completefunc = () => {
+  //   if ((bmi = null)) return null;
+  //   else if (bmi < 18.5) {
+  //     return function FuncUnderweight() {
+  //       return (
+  //         <h1 style={{ color: "#F1C40F", fontWeight: "700", fontSize: "2rem" }}>
+  //           Underweight
+  //         </h1>
+  //       );
+  //     };
+  //   } else if (bmi > 18.5 && bmi < 24) {
+  //     return function FuncNormal() {
+  //       return (
+  //         <h1 style={{ color: "#2ECC71", fontWeight: "700", fontSize: "2rem" }}>
+  //           Normal
+  //         </h1>
+  //       );
+  //     };
+  //   } else if (bmi > 24 && bmi < 30) {
+  //     return function FuncOverweight() {
+  //       return (
+  //         <h1 style={{ color: "#CB4335", fontWeight: "700", fontSize: "2rem" }}>
+  //           Overweight
+  //         </h1>
+  //       );
+  //     };
+  //   } else if (bmi > 30) {
+  //     return function FuncObese() {
+  //       return (
+  //         <h1 style={{ color: "#2C3E50", fontWeight: "700", fontSize: "2rem" }}>
+  //           Obese
+  //         </h1>
+  //       );
+  //     };
+  //   }
+  // };
 
   return (
     <div className="whole-page">
@@ -94,15 +158,60 @@ export default function App() {
           Calculate
         </button>
 
-        <span className="bmi-output">
-          Your BMI is: {bmi} { if(bmi = null){
-          return null;
+        <span className="bmi-output">Your BMI is: {bmi} </span>
+      
+        {/* {() => {
+          if ((bmi = null)) return null;
+          else if (bmi < 18.5) {
+            return (
+              <h1
+                style={{
+                  color: "#F1C40F",
+                  fontWeight: "700",
+                  fontSize: "2rem",
+                }}
+              >
+                 Underweight
+              </h1>
+            );
+          } else if (bmi > 18.5 && bmi < 24) {
+            return (
+              <h1
+                style={{
+                  color: "#2ECC71",
+                  fontWeight: "700",
+                  fontSize: "2rem",
+                }}
+              >
+                Normal{" "}
+              </h1>
+            );
+          } else if (bmi > 24 && bmi < 30) {
+            return (
+              <h1
+                style={{
+                  color: "#CB4335",
+                  fontWeight: "700",
+                  fontSize: "2rem",
+                }}
+              >
+                Overweight
+              </h1>
+            );
+          } else if (bmi > 30) {
+            return (
+              <h1
+                style={{
+                  color: "#2C3E50",
+                  fontWeight: "700",
+                  fontSize: "2rem",
+                }}
+              >
+                Obese
+              </h1>
+            );
           }
-          else if (bmi < 18.5){
-            <FuncUnderweight/>
-          }
-          }
-        </span>
+        }} */}
       </div>
 
       {/* about mbi calculator  */}
