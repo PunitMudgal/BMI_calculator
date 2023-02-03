@@ -3,39 +3,43 @@ import { useState } from "react";
 import "./App.css";
 
 export default function App() {
-  const [height, setHeight] = useState();
-  const [weight, setWeight] = useState();
-  const [bmi, setBmi] = useState();
+  const [height, setHeight] = useState(); // this hook reads height input in the field and store it in the height variable.
+  const [weight, setWeight] = useState(); // it reads weight input from the field and stores it.
+  const [bmi, setBmi] = useState(); //
 
   const heightHandler = (event) => {
+    // this is onChange attribute function of height field it reads the input of height field and store it in height usestate hook
     // console.log(event.target.value);
     setHeight(event.target.value);
   };
 
   const weightHandler = (event) => {
+    // this is onchange attribute function of weight field it reads the input of weight field and store it in weight usestate hook
     // console.log(event.target.value);
     setWeight(event.target.value);
   };
 
   const calcBtn = () => {
+    // this is the onClick attribute of calcuation button, it calculates the bmi by storing the square of height in a variable and dividing it by weight of the person
     // console.log(height);
     // console.log(weight);
     const squareOfHeight = height * height;
     // console.log(squareOfHeight);
     const actualBMI = weight / squareOfHeight;
     // console.log(actualBMI);
-    const shortValue = actualBMI.toFixed(2);
-    setBmi(shortValue);
+    const shortValue = actualBMI.toFixed(2); // to fixed(2) shotes the result and show only first 2 values
+    setBmi(shortValue); // took first 2 value of the result and stored in a variable and passed it to setbmi.
   };
- const resetHandle = () =>{
-  setHeight('');
-  setWeight('');
-  // if(height && weight == null){
-  //   return function alreadyEmpty(){
-  //     <h1>Field Already Empty</h1>
-  //   }
-  // }
- }
+  const resetHandle = () => {
+    // onClick attribute of reset button, it resets the the values in the field
+    setHeight("");
+    setWeight("");
+    // if(height && weight == null){
+    //   return function alreadyEmpty(){
+    //     <h1>Field Already Empty</h1>
+    //   }
+    // }
+  };
   //   const yourCondition = () => {
   // if(bmi<18.5){
   //  const condition = 'UnderWeight';
@@ -162,16 +166,17 @@ export default function App() {
 
         <br />
         <div className="buttons">
-        {/* calculate button  */}
-        <button onClick={calcBtn} className="cal-btn button">
-          Calculate
-        </button>
+          {/* calculate button  */}
+          <button onClick={calcBtn} className="cal-btn button">
+            Calculate
+          </button>
 
-        {/* reset button  */}
-        <button className=" reset-btn button" onClick={resetHandle}>Reset</button>
+          {/* reset button  */}
+          <button className=" reset-btn button" onClick={resetHandle}>
+            Reset
+          </button>
         </div>
         <span className="bmi-output">Your BMI is: {bmi} </span>
-
       </div>
 
       <div className="whole-list">

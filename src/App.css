@@ -65,13 +65,16 @@
   border-radius: 5px;
 }
 .cal-btn {
-  background-color: #3498DB  ;
+  background-color: #6C3483  ;
   /* text-align: center; */
   display: flex;
   justify-content:left;
   padding: 7px 12px;
   border-radius: 4px;
   color: whitesmoke;
+}
+.call-btn:hover{
+  background-color: #4A235A;
 }
 .reset-btn{
   background-color: red ;
@@ -140,9 +143,9 @@ h2{
 .whole-list{
   text-align: center;
 }
-.list-heading{
-  /* text-align: ; */
-}
+/* .list-heading{
+   text-align: ; 
+} */
 .list{
   font-weight: 500;
   font-size: larger;
