@@ -27,7 +27,15 @@ export default function App() {
     const shortValue = actualBMI.toFixed(2);
     setBmi(shortValue);
   };
-
+ const resetHandle = () =>{
+  setHeight('');
+  setWeight('');
+  // if(height && weight == null){
+  //   return function alreadyEmpty(){
+  //     <h1>Field Already Empty</h1>
+  //   }
+  // }
+ }
   //   const yourCondition = () => {
   // if(bmi<18.5){
   //  const condition = 'UnderWeight';
@@ -153,70 +161,22 @@ export default function App() {
         </div>
 
         <br />
+        <div className="buttons">
         {/* calculate button  */}
-        <button onClick={calcBtn} className="cal-btn">
+        <button onClick={calcBtn} className="cal-btn button">
           Calculate
         </button>
 
+        {/* reset button  */}
+        <button className=" reset-btn button" onClick={resetHandle}>Reset</button>
+        </div>
         <span className="bmi-output">Your BMI is: {bmi} </span>
 
-        {/* {() => {
-          if ((bmi = null)) return null;
-          else if (bmi < 18.5) {
-            return (
-              <h1
-                style={{
-                  color: "#F1C40F",
-                  fontWeight: "700",
-                  fontSize: "2rem",
-                }}
-              >
-                 Underweight
-              </h1>
-            );
-          } else if (bmi > 18.5 && bmi < 24) {
-            return (
-              <h1
-                style={{
-                  color: "#2ECC71",
-                  fontWeight: "700",
-                  fontSize: "2rem",
-                }}
-              >
-                Normal{" "}
-              </h1>
-            );
-          } else if (bmi > 24 && bmi < 30) {
-            return (
-              <h1
-                style={{
-                  color: "#CB4335",
-                  fontWeight: "700",
-                  fontSize: "2rem",
-                }}
-              >
-                Overweight
-              </h1>
-            );
-          } else if (bmi > 30) {
-            return (
-              <h1
-                style={{
-                  color: "#2C3E50",
-                  fontWeight: "700",
-                  fontSize: "2rem",
-                }}
-              >
-                Obese
-              </h1>
-            );
-          }
-        }} */}
       </div>
 
-      <div>
-        <h2>Common feet to meter conversions</h2>
-        <ol>
+      <div className="whole-list">
+        <h2 className="list-heading">Common feet to meter conversions:</h2>
+        <ol className="list">
           <li>5 feet 1 inches = 1.5494 m</li>
           <li>5 feet 2 inches = 1.5748 m</li>
           <li>5 feet 3 inches = 1.6002 m</li>
